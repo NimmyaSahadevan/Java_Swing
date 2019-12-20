@@ -7,7 +7,8 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class calculator {
+public class calculator 
+{
 
 	private JFrame frame;
 	private JTextField textField_1;
@@ -18,9 +19,12 @@ public class calculator {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
+	public static void main(String[] args) 
+	{
+		EventQueue.invokeLater(new Runnable() 
+		{
+			public void run()
+			{
 				try {
 					calculator window = new calculator();
 					window.frame.setVisible(true);
@@ -34,14 +38,16 @@ public class calculator {
 	/**
 	 * Create the application.
 	 */
-	public calculator() {
+	public calculator()
+	{
 		initialize();
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize() 
+	{
 		frame = new JFrame();
 		frame.setBounds(100, 100, 450, 300);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -75,8 +81,10 @@ public class calculator {
 		JButton btnSqrt = new JButton("sqrt");
 		btnSqrt.setBounds(10, 93, 57, 23);
 		frame.getContentPane().add(btnSqrt);
-		btnSqrt.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnSqrt.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				f++;
 				Double a=Math.sqrt(Double.parseDouble(textField_1.getText()));
 				textField_1.setText(" ");
@@ -88,8 +96,10 @@ public class calculator {
 		JButton btnNewButton = new JButton("1/x");
 		btnNewButton.setBounds(71, 93, 61, 23);
 		frame.getContentPane().add(btnNewButton);
-		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnNewButton.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
 				f++;
 				Double a=1/(Double.parseDouble(textField_1.getText()));
 				textField_1.setText(" ");
@@ -99,8 +109,10 @@ public class calculator {
 		
 		
 		JButton btnSin = new JButton("Sin");
-		btnSin.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnSin.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				f++;
 				Double a=Math.sin(Double.parseDouble(textField_1.getText())*Math.PI/180);
 				textField_1.setText(" ");
@@ -113,8 +125,10 @@ public class calculator {
 		JButton button = new JButton("%");
 		button.setBounds(10, 138, 57, 23);
 		frame.getContentPane().add(button);
-		button.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		button.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e)
+			{
 				 str1=textField_1.getText();
 				 str2=button.getText();
 				textField_1.setText(" ");
@@ -123,8 +137,10 @@ public class calculator {
 		
 		
 		JButton btnExp = new JButton("Exp");
-		btnExp.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnExp.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				f++;
 				Double a=Math.exp(Double.parseDouble(textField_1.getText()));
 				textField_1.setText(" ");
@@ -137,8 +153,10 @@ public class calculator {
 		frame.getContentPane().add(btnExp);
 		
 		JButton btnCos = new JButton("cos");
-		btnCos.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnCos.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				f++;
 				Double a=Math.cos(Double.parseDouble(textField_1.getText())*Math.PI/180);
 				//Double b=Math.toDegrees(a);
@@ -152,11 +170,13 @@ public class calculator {
 		JButton btnNewButton_1 = new JButton("x^y");
 		btnNewButton_1.setBounds(10, 182, 57, 23);
 		frame.getContentPane().add(btnNewButton_1);
-		btnNewButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnNewButton_1.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				f++;
 				str1=textField_1.getText();
-				 str2=btnNewButton_1.getText();
+				str2=btnNewButton_1.getText();
 				textField_1.setText(" ");
 			}
 		});
@@ -165,8 +185,10 @@ public class calculator {
 		JButton btnNewButton_2 = new JButton("ln");
 		btnNewButton_2.setBounds(71, 182, 61, 23);
 		frame.getContentPane().add(btnNewButton_2);
-		btnNewButton_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnNewButton_2.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				f++;
 				Double l=Math.log(Double.parseDouble(textField_1.getText()));
 				textField_1.setText(" ");
@@ -178,8 +200,10 @@ public class calculator {
 		JButton button_1 = new JButton("tan");
 		button_1.setBounds(138, 182, 61, 23);
 		frame.getContentPane().add(button_1);
-		button_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
+		button_1.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent arg0) 
+			{
 				f++;
 				Double a=Math.tan(Double.parseDouble(textField_1.getText())*Math.PI/180);
 				//Double b=Math.toDegrees(a);
@@ -190,8 +214,10 @@ public class calculator {
 		
 		
 		JButton btnX = new JButton("x^2");
-		btnX.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnX.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				f++;
 				Double a=Math.pow(Double.parseDouble(textField_1.getText()),2);
 				textField_1.setText(" ");
@@ -206,11 +232,13 @@ public class calculator {
 		JButton btnNewButton_3 = new JButton("n!");
 		btnNewButton_3.setBounds(71, 216, 61, 23);
 		frame.getContentPane().add(btnNewButton_3);
-		btnNewButton_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnNewButton_3.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				f=1;
-			  str1=textField_1.getText();
-			  str2=btnNewButton_3.getText();
+			  	str1=textField_1.getText();
+			  	str2=btnNewButton_3.getText();
 				float n=Float.parseFloat(str1);
 				int fact=1;
 				while(n>0)
@@ -226,10 +254,13 @@ public class calculator {
 		
 		
 		JButton btnSec = new JButton("sec");
-		btnSec.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnSec.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e)
+			{
 				f++;
 				Double a=1/(Math.cos(Double.parseDouble(textField_1.getText())*Math.PI/180));
+			
 				textField_1.setText(" ");
 				textField_1.setText(textField_1.getText()+a);
 			}
@@ -238,8 +269,10 @@ public class calculator {
 		frame.getContentPane().add(btnSec);
 		
 		JButton button_2 = new JButton("7");
-		button_2.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		button_2.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				if(f==1)
 				{
 					textField_1.setText(" ");	
@@ -255,8 +288,10 @@ public class calculator {
 		JButton button_3 = new JButton("8");
 		button_3.setBounds(271, 93, 51, 23);
 		frame.getContentPane().add(button_3);
-		button_3.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		button_3.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				if(f==1)
 				{
 					textField_1.setText(" ");	
@@ -271,8 +306,10 @@ public class calculator {
 		JButton button_4 = new JButton("9");
 		button_4.setBounds(330, 93, 46, 23);
 		frame.getContentPane().add(button_4);
-        button_4.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+        button_4.addActionListener(new ActionListener() 
+	{
+			public void actionPerformed(ActionEvent e) 
+			{
 				if(f==1)
 				{
 					textField_1.setText(" ");	
@@ -287,8 +324,10 @@ public class calculator {
 		JButton button_5 = new JButton("/");
 		button_5.setBounds(385, 93, 49, 23);
 		frame.getContentPane().add(button_5);
-		button_5.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		button_5.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				 str1=textField_1.getText();
 				 str2=button_5.getText();
 				textField_1.setText(" ");
@@ -300,8 +339,10 @@ public class calculator {
 		JButton button_6 = new JButton("4");
 		button_6.setBounds(209, 138, 52, 23);
 		frame.getContentPane().add(button_6);
-		button_6.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		button_6.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				if(f==1)
 				{
 					textField_1.setText(" ");	
@@ -317,8 +358,10 @@ public class calculator {
 		JButton button_7 = new JButton("5");
 		button_7.setBounds(271, 138, 51, 23);
 		frame.getContentPane().add(button_7);
-		button_7.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		button_7.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				if(f==1)
 				{
 					textField_1.setText(" ");	
@@ -334,8 +377,10 @@ public class calculator {
 		JButton button_8 = new JButton("6");
 		button_8.setBounds(330, 138, 46, 23);
 		frame.getContentPane().add(button_8);
-		button_8.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		button_8.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				if(f==1)
 				{
 					textField_1.setText(" ");	
@@ -349,8 +394,10 @@ public class calculator {
 		
 				
 		JButton button_9 = new JButton("*");
-		button_9.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		button_9.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				 str1=textField_1.getText();
 				 str2=button_9.getText();
 				textField_1.setText(" ");
@@ -363,8 +410,10 @@ public class calculator {
 		JButton button_10 = new JButton("1");
 		button_10.setBounds(209, 182, 52, 23);
 		frame.getContentPane().add(button_10);
-		button_10.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		button_10.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				if(f==1)
 				{
 					textField_1.setText(" ");	
@@ -378,8 +427,10 @@ public class calculator {
 		JButton button_11 = new JButton("2");
 		button_11.setBounds(271, 182, 51, 23);
 		frame.getContentPane().add(button_11);
-		button_11.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		button_11.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				if(f==1)
 				{
 					textField_1.setText(" ");	
@@ -395,8 +446,10 @@ public class calculator {
 		JButton button_12 = new JButton("3");
 		button_12.setBounds(330, 182, 46, 23);
 		frame.getContentPane().add(button_12);
-		button_12.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		button_12.addActionListener(new ActionListener()
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				if(f==1)
 				{
 					textField_1.setText(" ");	
@@ -412,7 +465,8 @@ public class calculator {
 		button_13.setBounds(385, 182, 49, 23);
 		frame.getContentPane().add(button_13);
 		button_13.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) 
+			{
 				 str1=textField_1.getText();
 				 str2=button_13.getText();
 				//textField_1.setText(" ");
@@ -425,7 +479,8 @@ public class calculator {
 		button_14.setBounds(209, 216, 52, 23);
 		frame.getContentPane().add(button_14);
 		button_14.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e)
+			{
 				if(f==1)
 				{
 					textField_1.setText(" ");	
@@ -443,7 +498,8 @@ public class calculator {
 		button_15.setBounds(271, 216, 51, 23);
 		frame.getContentPane().add(button_15);
 		button_15.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) 
+			{
 				if(f==1)
 				{
 					textField_1.setText(" ");	
@@ -451,8 +507,8 @@ public class calculator {
 				}
 				if(df==0)
 				{
-				textField_1.setText(textField_1.getText().concat(button_15.getText()));
-                df=1;;
+					textField_1.setText(textField_1.getText().concat(button_15.getText()));
+               				 df=1;;
 				}
 				
 			}
@@ -463,7 +519,8 @@ public class calculator {
 		
 		JButton button_16 = new JButton("=");
 		button_16.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e)
+			{
 				f++;
 				String str3=textField_1.getText();
 				textField_1.setText(" ");;
@@ -518,7 +575,8 @@ public class calculator {
 		button_17.setBounds(385, 216, 49, 23);
 		frame.getContentPane().add(button_17);
 		button_17.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) 
+			{
 			     str1=textField_1.getText();
 				 str2=button_17.getText();
 				textField_1.setText(" ");
