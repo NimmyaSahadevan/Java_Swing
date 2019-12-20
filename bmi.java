@@ -12,7 +12,8 @@ import java.awt.event.ActionEvent;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class bmi {
+public class bmi
+{
 
 	private JFrame frame;
 	private JTextField textField;
@@ -24,13 +25,18 @@ public class bmi {
 	/**
 	 * Launch the application.
 	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
+	public static void main(String[] args) 
+	{
+		EventQueue.invokeLater(new Runnable()
+		{
+			public void run() 
+			{
+				try 
+				{
 					bmi window = new bmi();
 					window.frame.setVisible(true);
-				} catch (Exception e) {
+				} catch (Exception e) 
+				{
 					e.printStackTrace();
 				}
 			}
@@ -40,14 +46,16 @@ public class bmi {
 	/**
 	 * Create the application.
 	 */
-	public bmi() {
+	public bmi() 
+	{
 		initialize();
 	}
 
 	/**
 	 * Initialize the contents of the frame.
 	 */
-	private void initialize() {
+	private void initialize() 
+	{
 		frame = new JFrame();
 		frame.getContentPane().setBackground(new Color(47, 79, 79));
 		frame.setBounds(100, 100, 450, 621);
@@ -110,8 +118,10 @@ public class bmi {
 		panel_1.add(lblNewLabel);
 		
 		JButton btnCalculate = new JButton("Calculate");
-		btnCalculate.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnCalculate.addActionListener(new ActionListener() 
+	        {
+			public void actionPerformed(ActionEvent e) 
+			{
 				String str1=textField.getText();
 				float a=Float.parseFloat(str1);
 				String str2=textField_1.getText();
@@ -143,8 +153,10 @@ public class bmi {
 		panel_1.add(btnCalculate);
 		
 		JButton btnClear = new JButton("Clear");
-		btnClear.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnClear.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				textField.setText(" ");
 				textField_1.setText(" ");
 				textField_2.setText(" ");
@@ -155,8 +167,10 @@ public class bmi {
 		panel_1.add(btnClear);
 		
 		JButton btnExit = new JButton("Exit");
-		btnExit.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		btnExit.addActionListener(new ActionListener() 
+		{
+			public void actionPerformed(ActionEvent e) 
+			{
 				frame.setVisible(false);
 			}
 		});
